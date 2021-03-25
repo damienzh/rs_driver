@@ -199,9 +199,9 @@ inline RSDecoderResult DecoderRSBP<T_Point>::decodeMsopPkt(const uint8_t* pkt, s
       }
       else
       {
-        setX(point, NAN);
-        setY(point, NAN);
-        setZ(point, NAN);
+        setX(point, 0.0001);
+        setY(point, 0.0001);
+        setZ(point, 0.0001);
         setIntensity(point, 0);
       }
       setRing(point, this->beam_ring_table_[channel_idx]);
